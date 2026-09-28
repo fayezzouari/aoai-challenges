@@ -1,0 +1,14 @@
+kaggle>=1.7
+jupyter
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+seaborn
+lightgbm
+xgboost
+# sports-master only (GPU recommended)
+torch
+torchvision
+pillow
