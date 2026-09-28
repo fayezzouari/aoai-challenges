@@ -46,12 +46,15 @@ kaggle competitions download sports-master -p sports-master/data
 unzip -o sports-master/data/sports-master.zip -d sports-master/data
 ```
 
-## Scores (validation split, 15% of train; saved notebook outputs come from a local Apple-GPU run)
+## Scores (saved notebook outputs come from a local Apple-GPU run)
 
-| Notebook | Approach | Val top-1 | Val top-5 |
-|---|---|---|---|
-| `baseline.ipynb` | Frozen MobileNetV2, 4 epochs | 75.8% | 95.5% |
-| `teacher.ipynb` | EfficientNet-B0, 10 head epochs + 9 fine-tune epochs | 90.7% | 98.9% |
+Validation = 15% hold-out of train. Test = the 500 competition test images, scored like the leaderboard
+(true labels taken from the test file names, see the leakage note below).
+
+| Notebook | Approach | Val top-1 | Val top-5 | **Test top-1** |
+|---|---|---|---|---|
+| `baseline.ipynb` | Frozen MobileNetV2, 4 epochs | 75.8% | 95.5% | **81.2%** |
+| `teacher.ipynb` | EfficientNet-B0, 10 head epochs + 9 fine-tune epochs | 90.7% | 98.9% | **95.0%** |
 
 ## Organizer note: test labels leak through file names
 

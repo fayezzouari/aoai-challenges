@@ -8,7 +8,7 @@ Kaggle challenges. Each challenge has its own folder.
 | [`moth-hardness-task/`](moth-hardness-task/) | Moth Hardness (Task 3) | Tabular regression | Median AE ↓ | 0.70 → 0.50 |
 | [`cirrhosis-outcomes-prediction-task/`](cirrhosis-outcomes-prediction-task/) | Cirrhosis Outcomes (Task 4) | Tabular multi-class | Log loss ↓ | 0.39 → 0.364 |
 | [`limbako-classification/`](limbako-classification/) | Limbako Classification | Unsupervised text clustering | Macro F1 ↑ | ~0.55 → ~0.88 |
-| [`sports-master/`](sports-master/) | Sports Master (SportSnap) | Image classification, 100 classes | Accuracy ↑ | 75% → 91% (val) |
+| [`sports-master/`](sports-master/) | Sports Master (SportSnap) | Image classification, 100 classes | Accuracy ↑ | 81.2% → 95.0% (test) |
 
 Each folder contains:
 
