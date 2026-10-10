@@ -46,21 +46,11 @@ kaggle competitions download sports-master -p sports-master/data
 unzip -o sports-master/data/sports-master.zip -d sports-master/data
 ```
 
-## Scores (saved notebook outputs come from a local Apple-GPU run)
-
-Validation = 15% hold-out of train. Test = the 500 competition test images, scored like the leaderboard
-(true labels taken from the test file names, see the leakage note below).
-
-| Notebook | Approach | Val top-1 | Val top-5 | **Test top-1** |
-|---|---|---|---|---|
-| `baseline.ipynb` | Frozen MobileNetV2, 4 epochs | 75.8% | 95.5% | **81.2%** |
-| `teacher.ipynb` | EfficientNet-B0, 10 head epochs + 9 fine-tune epochs | 90.7% | 98.9% | **95.0%** |
-
 ## Organizer note: test labels leak through file names
 
 Test files are named `air hockey_1.jpg`, `ampute football_1.jpg`, …, so the label can be read from the
-file name. The practice dataset's `sample_submission.csv` even contained the correct labels. The 1.000 at
-the top of the leaderboard very likely comes from this. Before reusing the challenge, rename test images
+file name. The practice dataset's `sample_submission.csv` even contained the correct labels. A perfect result
+at the top of the leaderboard very likely comes from this. Before reusing the challenge, rename test images
 to random IDs and give out a sample submission with dummy labels.
 
 ## Changes from the original Kaggle notebooks

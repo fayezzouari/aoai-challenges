@@ -3,18 +3,18 @@
 Baseline (student) and teacher (reference solution) notebooks for four African Olympiad of AI
 Kaggle challenges. Each challenge has its own folder.
 
-| Folder | Challenge | Type | Metric | Baseline → teacher |
-|---|---|---|---|---|
-| [`moth-hardness-task/`](moth-hardness-task/) | Moth Hardness (Task 3) | Tabular regression | Median AE ↓ | 0.70 → 0.50 |
-| [`cirrhosis-outcomes-prediction-task/`](cirrhosis-outcomes-prediction-task/) | Cirrhosis Outcomes (Task 4) | Tabular multi-class | Log loss ↓ | 0.39 → 0.364 |
-| [`limbako-classification/`](limbako-classification/) | Limbako Classification | Unsupervised text clustering | Macro F1 ↑ | ~0.55 → ~0.88 |
-| [`sports-master/`](sports-master/) | Sports Master (SportSnap) | Image classification, 100 classes | Accuracy ↑ | 81.2% → 95.0% (test) |
+| Folder | Challenge | Type | Metric |
+|---|---|---|---|
+| [`moth-hardness-task/`](moth-hardness-task/) | Moth Hardness (Task 3) | Tabular regression | Median AE ↓ |
+| [`cirrhosis-outcomes-prediction-task/`](cirrhosis-outcomes-prediction-task/) | Cirrhosis Outcomes (Task 4) | Tabular multi-class | Log loss ↓ |
+| [`limbako-classification/`](limbako-classification/) | Limbako Classification | Unsupervised text clustering | Macro F1 ↑ |
+| [`sports-master/`](sports-master/) | Sports Master (SportSnap) | Image classification, 100 classes | Accuracy ↑ |
 
 Each folder contains:
 
 ```
 <challenge>/
-├── README.md        task, data, submission format, scores, teaching points, changes made
+├── README.md        task, data, submission format, teaching points, changes made
 ├── baseline.ipynb   starter notebook for students
 ├── teacher.ipynb    reference solution + grading guide ( organizers only)
 └── data/            competition files (git-ignored, download with the Kaggle CLI)

@@ -45,17 +45,6 @@ cd moth-hardness-task && jupyter notebook baseline.ipynb
 
 On Kaggle, attach the competition data and the notebooks find it automatically.
 
-## Scores (5-fold OOF, local run)
-
-| Notebook | Approach | OOF Median AE |
-|---|---|---|
-| — | Predict the median everywhere | 1.20 |
-| `baseline.ipynb` | LightGBM, squared-error loss | ~0.70 |
-| `teacher.ipynb` | LightGBM, **L1 loss** | ~0.57 |
-| `teacher.ipynb` | L1 loss + **snapping to the 10 most frequent hardness values** | **0.50** |
-
-Best public leaderboard score during the competition: 0.532.
-
 ## Teaching points
 
 1. **Match the loss to the metric.** Squared error predicts the mean, absolute error predicts the median.

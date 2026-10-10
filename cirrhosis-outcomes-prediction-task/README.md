@@ -48,17 +48,6 @@ unzip -o cirrhosis-outcomes-prediction-task/data/*.zip -d cirrhosis-outcomes-pre
 cd cirrhosis-outcomes-prediction-task && jupyter notebook baseline.ipynb
 ```
 
-## Scores (5-fold OOF, local run)
-
-| Notebook | Approach | OOF log loss |
-|---|---|---|
-| — | Predict the class prior everywhere | 0.727 |
-| `baseline.ipynb` | LightGBM, `class_weight='balanced'` | ~0.39–0.40 |
-| `teacher.ipynb` | LightGBM, no class weighting, NaNs kept + missing-block flag | 0.365 |
-| `teacher.ipynb` | + XGBoost blend | **0.364** |
-
-Best public leaderboard score during the competition: 0.368.
-
 ## Teaching points
 
 1. **Log loss scores probabilities.** `class_weight='balanced'` inflates the rare `CL` class and

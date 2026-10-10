@@ -51,17 +51,6 @@ labels are in `limbako-classification/labels/`:
 These files are not on Kaggle's public API. Without them, the notebook skips evaluation and still
 writes a submission. `labels/` is git-ignored.
 
-## Expected scores (Macro F1)
-
-| Approach | Macro F1 |
-|---|---|
-| K-Means on TF-IDF (the classic trap) | ~0.15–0.20 |
-| NMF | ~0.40–0.45 |
-| LDA (`baseline.ipynb`, correctly named) | ~0.50–0.65 |
-| **TF-IDF + agglomerative (cosine, average) + centroid prediction** (`teacher.ipynb`) | **~0.87–0.90** |
-
-Best public leaderboard score during the competition: 0.869.
-
 ## Organizer note: Limbako is Swahili
 
 The cluster top words are real Swahili (*shamba* = farm, *daktari* = doctor, *simu* = phone,
